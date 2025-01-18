@@ -1,0 +1,137 @@
+[
+    {
+      "id": 1,
+      "templateName": "User Registration",
+      "fields": [
+        {
+          "name": "firstName",
+          "label": "First Name",
+          "placeholder": "Enter your first name",
+          "type": "text",
+          "validation": { "required": true }
+        },
+        {
+          "name": "lastName",
+          "label": "Last Name",
+          "placeholder": "Enter your last name",
+          "type": "text",
+          "validation": { "required": true }
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "placeholder": "Enter your email",
+          "type": "email",
+          "validation": { "required": true, "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$" }
+        },
+        {
+          "name": "password",
+          "label": "Password",
+          "placeholder": "Enter your password",
+          "type": "password",
+          "validation": { "required": true, "minLength": 8 }
+        },
+        {
+          "name": "age",
+          "label": "Age",
+          "placeholder": "Enter your age",
+          "type": "number",
+          "validation": { "required": true, "min": 18, "max": 100 }
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "radio",
+          "options": ["Male", "Female"],
+          "validation": { "required": true }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "templateName": "Feedback Form",
+      "fields": [
+        {
+          "name": "fullName",
+          "label": "Full Name",
+          "placeholder": "Enter your full name",
+          "type": "text",
+          "validation": { "required": true }
+        },
+        {
+          "name": "feedback",
+          "label": "Your Feedback",
+          "placeholder": "Share your thoughts",
+          "type": "textarea",
+          "validation": { "required": true, "minLength": 20 }
+        },
+        {
+          "name": "rating",
+          "label": "Rate Our Service",
+          "type": "select",
+          "options": ["1 - Poor", "2 - Fair", "3 - Good", "4 - Very Good", "5 - Excellent"],
+          "validation": { "required": true }
+        },
+        {
+          "name": "subscribe",
+          "label": "Subscribe to Newsletter",
+          "type": "checkbox",
+          "validation": {}
+        }
+      ]
+    },
+    {
+      "id":3,
+      "templateName": "Event Registration",
+      "fields": [
+        {
+          "name": "eventName",
+          "label": "Event Name",
+          "type": "text",
+          "placeholder": "Enter the event name",
+          "validation": { "required": true }
+        },
+        {
+          "name": "date",
+          "label": "Event Date",
+          "type": "date",
+          "validation": { "required": true }
+        },
+        {
+          "name": "time",
+          "label": "Event Time",
+          "type": "time",
+          "validation": { "required": true }
+        },
+        {
+          "name": "location",
+          "label": "Location",
+          "type": "text",
+          "placeholder": "Enter event location",
+          "validation": { "required": true }
+        },
+        {
+            "name": "members",
+            "label": "Members",
+            "type": "text",
+            "repeatable": true,
+            "placeholder": "Name"
+        },
+        {
+          "name": "participants",
+          "label": "Number of Participants",
+          "type": "number",
+          "placeholder": "Enter the number of participants",
+          "validation": { "required": true, "min": 1 }
+        },
+        {
+          "name": "preferences",
+          "label": "Dietary Preferences",
+          "type": "multiselect",
+          "options": ["Vegetarian", "Gluten-Free", "No Preferences"],
+          "validation": {}
+        }
+      ]
+    }
+  ]
+  

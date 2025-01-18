@@ -1,0 +1,7 @@
+{
+  "fullName": "const toastAdd = (type, message) => {   toast[type](message, {     position: 'top-right',     autoClose: 5000,     hideProgressBar: false,     closeOnClick: true,     pauseOnHover: true,     draggable: true,     progress: undefined,   }); };",
+  "feedback": "const toastAdd = (type, message) => {\n  toast[type](message, {\n    position: 'top-right',\n    autoClose: 5000,\n    hideProgressBar: false,\n    closeOnClick: true,\n    pauseOnHover: true,\n    draggable: true,\n    progress: undefined,\n  });\n};",
+  "rating": "2 - Fair",
+  "subscribe": true,
+  "members": null
+}

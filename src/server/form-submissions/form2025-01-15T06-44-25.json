@@ -1,0 +1,12 @@
+{
+  "eventName": "Football",
+  "date": "2024-01-13",
+  "time": "22:00",
+  "location": "Abu-Dhabi",
+  "members": [
+    "Real Madrid",
+    "Barcelona"
+  ],
+  "participants": 40,
+  "preferences": "Gluten-Free"
+}
