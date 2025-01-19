@@ -1,4 +1,6 @@
-const FormsList = ({ forms, handleFormClick }) => {
+import { FormListProps } from "../interfaces/FormInterfaces";
+
+const FormsList: React.FC<FormListProps> = ({ forms, handleFormClick }) => {
   return (
     <ul>
       {forms.map((form) => (

@@ -2,7 +2,7 @@ import { AppDispatch } from "../index";
 import { addFormsAction } from "../formReducer"
 import formData from './form.json'
 
-interface FetchFormsThunk {
+export interface FetchFormsThunk {
 	(dispatch: AppDispatch): void;
 }
 

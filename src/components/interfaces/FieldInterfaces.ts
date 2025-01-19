@@ -1,5 +1,13 @@
 import { FieldProps } from 'formik';
 
+export interface FieldInterface {
+	name: string;
+	label: string;
+	placeholder?: string;
+	type: string;
+	options?: string[];
+}
+
 export interface FieldComponentProps {
   field: {
     name: string;

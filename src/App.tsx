@@ -40,7 +40,7 @@ function App() {
         <SelectedForm
           selectedForm={selectedForm}
           handleSubmit={handleSubmit}
-          renderField={(field) => renderField(field, membersList, setMembersList)}
+					renderField={(field) => renderField({ field, membersList, setMembersList })}
         />
       )}
     </>
