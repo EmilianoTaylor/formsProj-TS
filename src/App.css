@@ -39,3 +39,7 @@ button {
 	margin: 5px;
 	cursor: pointer;
 }
+
+.redDiv {
+	color: red;
+}

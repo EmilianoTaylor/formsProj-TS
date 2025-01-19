@@ -2,11 +2,7 @@ import { AppDispatch } from "../index";
 import { addFormsAction } from "../formReducer"
 import formData from './form.json'
 
-export interface FetchFormsThunk {
-	(dispatch: AppDispatch): void;
-}
-
-const FetchForms: FetchFormsThunk = () => {
+const FetchForms = () => {
 	return function (dispatch: AppDispatch) {
 		dispatch(addFormsAction(formData));
 		console.log(formData)

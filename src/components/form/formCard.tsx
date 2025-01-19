@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import FormsList from "./formList";
 import { FormCardProps } from "../interfaces/FormInterfaces";
 import { AppDispatch } from "../../store";
-import FetchForms, { FetchFormsThunk } from "../../store/async Actions/forms";
+import FetchForms from "../../store/async Actions/forms";
 
 
 
@@ -12,7 +12,7 @@ const FormCard: React.FC<FormCardProps> = ({ forms, handleFormClick }) => {
     <div className="card">
       <button
         style={{ visibility: forms.length > 0 ? 'hidden' : 'visible' }}
-        onClick={() => dispatch(FetchForms() as FetchFormsThunk)}
+        onClick={() => dispatch(FetchForms())}
       >
         Получить формы из базы
       </button>

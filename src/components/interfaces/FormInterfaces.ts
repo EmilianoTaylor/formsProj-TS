@@ -14,14 +14,23 @@ export interface FormCardProps {
 	FetchForms: () => void;
 }
 
-export interface RenderFieldComponentProps {
-  field: {
-    name: string;
-    label: string;
-    placeholder?: string;
-    type: string;
-    options?: string[];
+export interface SelectedFieldProps {
+  name: string;
+  validation?: {
+    required?: boolean;
+    pattern?: string;
+    minLength?: number;
+    min?: number;
+    max?: number;
   };
-  membersList: string[];
-  setMembersList: (membersList: string[]) => void;
+}
+
+export interface SelectedFormProps {
+  selectedForm: {
+    id: string;
+    templateName: string;
+    fields: SelectedFieldProps[];
+  };
+  handleSubmit: (values: { [key: string]: any }) => void;
+  renderField: (field: SelectedFieldProps) => React.ReactNode;
 }
