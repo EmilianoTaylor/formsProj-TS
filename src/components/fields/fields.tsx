@@ -1,6 +1,6 @@
 import { TextField, RadioGroup, FormControlLabel, Radio, Select, MenuItem, Checkbox, Button } from '@mui/material';
-import { Field, FieldProps } from 'formik';
-import { DateFieldComponentProps, FieldComponentProps } from '../interfaces/FieldInterfaces';
+import { Field } from 'formik';
+import { CheckboxFieldComponentProps, DateFieldComponentProps, FieldComponentProps, MembersFieldComponentProps, NumberFieldComponentProps, RadioFieldComponentProps, SelectFieldComponentProps, TextareaFieldComponentProps, TimeFieldComponentProps } from '../interfaces/FieldInterfaces';
 
 const TextFieldComponent: React.FC<FieldComponentProps> = ({ field, ...props }) => {
   return (
@@ -17,7 +17,7 @@ const TextFieldComponent: React.FC<FieldComponentProps> = ({ field, ...props }) 
   );
 };
 
-const DateFieldComponent: React.FC<DateFieldComponentProps> = ({ field, ...props }) => {
+const DateFieldComponent: React.FC<DateFieldComponentProps> = ({ field }) => {
 	return (
 		<Field
 			type="date"
@@ -30,7 +30,8 @@ const DateFieldComponent: React.FC<DateFieldComponentProps> = ({ field, ...props
 		/>
 	)
 }
-const TimeFieldComponent = ({ field }) => {
+
+const TimeFieldComponent: React.FC<TimeFieldComponentProps> = ({ field }) => {
 	return (
 		<Field
 			type="time"
@@ -44,7 +45,7 @@ const TimeFieldComponent = ({ field }) => {
 	)
 }
 
-const NumberFieldComponent = ({ field }) => {
+const NumberFieldComponent: React.FC<NumberFieldComponentProps> = ({ field }) => {
 	return (
 		<Field
 			type="number"
@@ -58,7 +59,7 @@ const NumberFieldComponent = ({ field }) => {
 	)
 }
 
-const RadioFieldComponent = ({ field, ...props }) => {
+const RadioFieldComponent: React.FC<RadioFieldComponentProps> = ({ field, ...props }) => {
   return (
     <Field
       name={field.name}
@@ -76,7 +77,7 @@ const RadioFieldComponent = ({ field, ...props }) => {
   );
 };
 
-const SelectFieldComponent = ({ field, ...props }) => {
+const SelectFieldComponent: React.FC<SelectFieldComponentProps> = ({ field, ...props }) => {
   return (
     <Field
       name={field.name}
@@ -98,7 +99,7 @@ const SelectFieldComponent = ({ field, ...props }) => {
   );
 };
 
-const CheckboxFieldComponent = ({ field, ...props }) => {
+const CheckboxFieldComponent: React.FC<CheckboxFieldComponentProps> = ({ field, ...props }) => {
   return (
     <Field
       name={field.name}
@@ -109,7 +110,7 @@ const CheckboxFieldComponent = ({ field, ...props }) => {
   );
 };
 
-const TextareaFieldComponent = ({ field, ...props }) => {
+const TextareaFieldComponent: React.FC<TextareaFieldComponentProps> = ({ field, ...props }) => {
   return (
     <Field
       name={field.name}
@@ -121,7 +122,7 @@ const TextareaFieldComponent = ({ field, ...props }) => {
   );
 };
 
-const MembersFieldComponent = ({ member, setMember, membersList, handleAddMember, handleRemoveMember }) => {
+const MembersFieldComponent: React.FC<MembersFieldComponentProps> = ({ member, setMember, membersList, handleAddMember, handleRemoveMember }) => {
   return (
     <div>
       <Field
@@ -132,7 +133,7 @@ const MembersFieldComponent = ({ member, setMember, membersList, handleAddMember
         fullWidth
         margin="normal"
         value={member}
-        onChange={(e) => setMember(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMember(e.target.value)}
       />
       <Button onClick={handleAddMember}>Добавить</Button>
       <ul>

@@ -2,11 +2,12 @@ import { useState } from "react";
 import { CheckboxFieldComponent, DateFieldComponent, MembersFieldComponent, 
 	NumberFieldComponent, RadioFieldComponent, SelectFieldComponent, 
 	TextareaFieldComponent, TextFieldComponent, TimeFieldComponent } from "./fields";
+import { MembersFieldComponentProps } from "../interfaces/FieldInterfaces";
 
 
-const renderField = (field, membersList, setMembersList) => {
+const renderField: React.FC<MembersFieldComponentProps> = ({ field, membersList, setMembersList }) => {
   const [member, setMember] = useState("");
-
+	
 	const handleAddMember = () => {
     if (member.trim() !== "") {
       setMembersList([...membersList, member]);
@@ -14,7 +15,7 @@ const renderField = (field, membersList, setMembersList) => {
     }
   };
 
-  const handleRemoveMember = (index) => {
+  const handleRemoveMember = (index: number) => {
     const newMembersList = [...membersList];
     newMembersList.splice(index, 1);
     setMembersList(newMembersList);

@@ -66,9 +66,17 @@ export interface TextareaFieldComponentProps {
 }
 
 export interface MembersFieldComponentProps {
+	field: {
+    name: string;
+    label: string;
+    placeholder?: string;
+    type: string;
+    options: string[];
+  };
   member: string;
-  setMember: (value: string) => void;
+  setMember: (member: string) => void;
   membersList: string[];
+  setMembersList: (membersList: string[]) => void;
   handleAddMember: () => void;
   handleRemoveMember: (index: number) => void;
 }
